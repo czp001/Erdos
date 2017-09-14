@@ -34,7 +34,7 @@ int64 st(int64 n)
 		s2=0;
 		for(j=1;j<=n3;j++)
 		{
-			s2+=n/(i*j);
+			s2+=int64(n*1.0/(i*j));
 		}
 		s+=sd(n/i)-s2;
 	}
