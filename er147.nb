@@ -1,0 +1,4 @@
+#hint
+{Range[30], 
+   Factor[FindSequenceFunction[#, k]] & /@ 
+    Table[f[n, k], {n, 30}, {k, 0, 10}]} // Transpose // Column
