@@ -1,5 +1,5 @@
 (*some hints,to be continue*)
 f[n_, 0] := 1; f[n_, k_] := DivisorSum[n, f[#, k - 1] &];
-{Range[30], 
+{Range[64], 
    Factor[FindSequenceFunction[#, k]] & /@ 
-    Table[f[n, k], {n, 30}, {k, 0, 10}]} // Transpose // Column
+    Table[f[n, k], {n, 64}, {k, 0, 10}]} // Transpose // Column
