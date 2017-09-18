@@ -59,6 +59,6 @@ int main()
 	tot=add(tot,P(i,n));
     }
     cout <<"n: "<<n<<"   "<<add(tot,mod)<< endl;
-    cout<<(clock()-start)/1000.<<"secs"<<endl;
+    cout<<(clock()-start)*1.0/CLOCKS_PER_SEC<<"secs"<<endl;
     return 0;
 }
