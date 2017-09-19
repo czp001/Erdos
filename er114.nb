@@ -1,0 +1,1 @@
+ChineseRemainder[{0, 2, 1, 1, 10, 3, 4, 10, 2}, Prime[Range[9]]]
