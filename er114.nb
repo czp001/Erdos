@@ -1,1 +1,2 @@
 ChineseRemainder[{0, 2, 1, 1, 10, 3, 4, 10, 2}, Prime[Range[9]]]
+(* D(n) mod p is Periodically,cycle length is 2*p  *)
