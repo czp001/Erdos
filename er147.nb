@@ -1,4 +1,4 @@
-(*some hints,to be continue*)
+(*some hints*)
 f[n_, 0] := 1; f[n_, k_] := DivisorSum[n, f[#, k - 1] &];
 {Range[64], 
    Factor[FindSequenceFunction[#, k]] & /@ 
