@@ -5,5 +5,5 @@ f[n_, 0] := 1; f[n_, k_] := DivisorSum[n, f[#, k - 1] &];
     Table[f[n, k], {n, 64}, {k, 0, 10}]} // Transpose // Column
     
 (*this is a PARI/GP code solution,takes 13 min*)
-F(n,k)={local(f,L,fx);f=factor(n);L=#f~;fx=1;for(n=1,L,fx=fx*prod(i=0,f[n,2]-1,x+i)/f[n,2]!);subst(fx,x,Mod(k,10^9+7))}
+F(n,k)={local(f,L,fx);f=factor(n);L=#f~;fx=1;for(n=1,L,fx=fx*prod(i=0,f[n,2]-1,Mod(k,10^9+7)+i)/f[n,2]!);fx}
 sum(n=1,98765432,F(n,2345678+1))
