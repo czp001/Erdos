@@ -28,9 +28,9 @@ def pi(n,k):
                     S[v] -= p**k*(S[v//p] - sp)
         return S[n]
     else:
-		i,ans=1,0
-		while prime[i]**k<=n:
-			ans+=prime[i]**k
+	i,ans=1,0
+	while prime[i]**k<=n:
+		ans+=prime[i]**k
 			if 2*prime[i]**k<=n:
 				ans+=2*prime[i]**k
 			i+=1
