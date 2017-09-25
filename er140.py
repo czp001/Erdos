@@ -28,15 +28,13 @@ def pi(n,k):
                     S[v] -= p**k*(S[v//p] - sp)
         return S[n]
     else:
-		i,ans=1,0
-		try:
-			while prime[i]**k<=n:
-				ans+=prime[i]**k
-				if 2*prime[i]**k<=n:
-					ans+=2*prime[i]**k
-				i+=1
-		except IndexError:print [i,k,n]
-		return ans
+	i,ans=1,0
+	while prime[i]**k<=n:
+		ans+=prime[i]**k
+			if 2*prime[i]**k<=n:
+				ans+=2*prime[i]**k
+			i+=1
+	return ans
         
 def f(n):
     ans=n+1+pi(n,1)+2*pi(n//2,1)
