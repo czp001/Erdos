@@ -28,13 +28,13 @@ def pi(n,k):
                     S[v] -= p**k*(S[v//p] - sp)
         return S[n]
     else:
-	    i,ans=1,0
-	    while prime[i]**k<=n:
-		    ans+=prime[i]**k
+		i,ans=1,0
+		while prime[i]**k<=n:
+			ans+=prime[i]**k
 			if 2*prime[i]**k<=n:
-                ans+=2*prime[i]**k
+				ans+=2*prime[i]**k
 			i+=1
-	return ans
+		return ans
         
 def f(n):
     ans=n+1+pi(n,1)+2*pi(n//2,1)
@@ -52,4 +52,3 @@ for i in range(1,12+1):
 	ans+=f(10**i)
 print ans%1000000007
 print default_timer()-start,'secs'
-
