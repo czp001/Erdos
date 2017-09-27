@@ -38,6 +38,6 @@ int main(){
 	ll ans=0;
 	for(int i=1;i<=12345678;i++)ans=(ans+f(i))%mod;
 	cout << ans<< endl; 
-	cout<<(clock()-start)/1000.<<" secs "<<endl;
+	cout<<(clock()-start)*1.0/CLOCKS_PER_SEC<<" secs "<<endl;
 	return 0;
 }
