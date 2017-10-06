@@ -7,7 +7,8 @@ typedef long long LL;
 const int P=1000000007;
 const int N = 21600000;
 int prime[N + 1], M[N + 1];
-LL pow(int x,int n){
+LL pow(int x,int n)
+{
 	LL v=1;
 	for(;n;n>>=1){
 		if(n&1)v=1ll*v*x%P;
@@ -21,7 +22,8 @@ int C(int n,int m)
 {
 	return fac[n]*1ll*fiv[m]%P*fiv[n-m]%P;
 }
-void pre(){
+void pre()
+{
 	fac[0]=fiv[0]=1;
 	for(int i=1;i<=1005;++i){
 		fac[i]=1ll*fac[i-1]*i%P;
