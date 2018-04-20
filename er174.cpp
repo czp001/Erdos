@@ -72,7 +72,6 @@ LL S(LL n){
 	LL s=0;
 	for(int i=13;i<=n;i++){
 		s=add(s,si(i));
-		if(i%100000000==0)cout<<i<<endl;
 	}
 	return s;
 }
