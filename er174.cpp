@@ -1,12 +1,12 @@
 //Not finish
-#include <iostream>  
+#include <iostream>
 #include <cstring>
 #include<ctime>
 
 using namespace std;
 typedef long long LL;
 int mod=1e9+7;
-const LL N=1000000000000000000;
+const LL N=10000000;
 const LL fenzi=538660962;
 struct Matrix
 {
@@ -65,7 +65,7 @@ LL si(LL n){
 	for(int i=1;i<=199;i++){
 		pod=mul(pod,sub(t,i));
 	}
-	return mul(pod,fenzi);
+	return pod;
 }
 
 LL S(LL n){
@@ -92,6 +92,8 @@ int main()
 	LL re=(N+2-13+1)%(2+2*mod);
 	cout<<loops<<endl;
 	cout<<re<<endl;
-	cout<<S(2000000028)<<endl;
+	//cout<<mul(S(2000000028),fenzi)<<endl;
+	cout<<mul(S(10000000+2),fenzi)<<endl;
     cout<<(clock()-s)*1.0/CLOCKS_PER_SEC<<endl;
 }
+
