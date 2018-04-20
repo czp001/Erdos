@@ -1,4 +1,3 @@
-//Not finish
 #include <iostream>
 #include <cstring>
 #include<ctime>
@@ -6,7 +5,7 @@
 using namespace std;
 typedef long long LL;
 int mod=1e9+7;
-const LL N=10000000;
+const LL N=1000000000000000000;
 const LL fenzi=538660962;
 struct Matrix
 {
@@ -80,20 +79,19 @@ int main()
     time_t s;
     s=clock();/*
     const LL MAXN = 1e8+3;
-
 	bool *flag=new bool[MAXN];
 	LL *phi=new LL[MAXN];
 	LL *p=new LL[MAXN];
 	LL *ans=new LL[MAXN];
 	LL *ans2=new LL[MAXN];*/
 	LL Sr=384773643;
-	LL Sl=0;
+	LL Sl=583801548;
 	LL loops=(N+2-13+1)/(2+2*mod);
 	LL re=(N+2-13+1)%(2+2*mod);
 	cout<<loops<<endl;
 	cout<<re<<endl;
 	//cout<<mul(S(2000000028),fenzi)<<endl;
-	cout<<mul(S(10000000+2),fenzi)<<endl;
+	//cout<<mul(S(10000000+2),fenzi)<<endl;
+	cout<<add(Sr,mul(loops,Sl))<<endl;
     cout<<(clock()-s)*1.0/CLOCKS_PER_SEC<<endl;
 }
-
