@@ -1,0 +1,6 @@
+a[n_] := (Algebra`MatrixPowerMod[{{1, 2, 4}, {1, 0, 0}, {0, 1, 0 }}, 
+       n - 3, 998244353].{3, 2, 1})[[1]]~Mod~998244353;
+m = Join[SparseArray[{Band[{1, 2}] -> 1}, {59, 
+     60}], {Table[-a[2^n], {n, 0, 59}]}];
+Tr[Algebra`MatrixPowerMod[m, 123456789987654321, 
+   998244353]]~Mod~998244353
